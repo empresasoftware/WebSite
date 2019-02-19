@@ -2,22 +2,24 @@
   <div class="container">
     <div class="row auth-form-wrapper">
       <div class="col-12 col-lg-7 col-xl-6">
-        <h1 class="auth-title">Welcome back!</h1>
+        <h1 class="auth-title">Inicio de sesión</h1>
         <app-auth-signin-form [redirectUrl]="'/user'"></app-auth-signin-form>
         <div class="auth-alt-options">
           <a class="btn btn-link secondary-call-to-action-btn" [routerLink]="['/create-account']">
-            Don't have an Account yet?
+            Crear cuenta?
           </a>
           <a class="btn btn-link secondary-call-to-action-btn" [routerLink]="['/recover-password']">
-            Forgot password?
+            ¿Olvidó la constraseña?
           </a>
         </div>
         <div class="auth-form-divider">
-          <span class="divider-text">OR</span>
+          <span class="divider-text">Ó</span>
         </div>
+        <!--
         <button class="btn btn-block social-alternative-btn" (click)="redirectAccount()">
-          SIGN IN WITH FACEBOOK
+          
         </button>
+        -->
       </div>
     </div>
   </div>

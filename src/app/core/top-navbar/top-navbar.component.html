@@ -1,6 +1,6 @@
 <nav class="main-navbar navbar navbar-expand-lg" [ngClass]="{'not-home': !router.isActive('/', true), 'expanded': !navbarCollapsed}" >
   <a class="navbar-brand" [routerLink]="['/']" (click)="navbarCollapsed = true">
-    <img class="brand-logo" alt="ANGULAR STORE" title="ANGULAR STORE" src="/assets/imgs/logo.svg">
+    <img class="brand-logo" alt="Logo" title="Logo" src="/assets/imgs/logo1.png">
   </a>
   <button (click)="navbarCollapsed = !navbarCollapsed" class="navbar-toggler" type="button" [attr.aria-expanded]="!navbarCollapsed" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon">
@@ -16,17 +16,17 @@
       </li>
       <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="navbarCollapsed = true">
         <a class="nav-link" [routerLink]="['/']">
-          HOME
+          PRINCIPAL
         </a>
       </li>
       <li class="nav-item" routerLinkActive="active" (click)="navbarCollapsed = true">
         <a class="nav-link" [routerLink]="['/about']">
-          ABOUT
+          ACERCA
         </a>
       </li>
       <li class="nav-item" routerLinkActive="active" (click)="navbarCollapsed = true">
         <a class="nav-link" [routerLink]="['/products']">
-          SHOP
+          CATALOGO
         </a>
       </li>
       <li class="nav-divider d-lg-none">
@@ -34,22 +34,22 @@
       </li>
       <li class="nav-item user-action-item" *ngIf="(loggedInObservable | async) === false" routerLinkActive="active" (click)="navbarCollapsed = true">
         <a class="nav-link" [routerLink]="['/create-account']">
-          Join
+          Unirse
         </a>
       </li>
       <li class="nav-item user-action-item" *ngIf="(loggedInObservable | async) === false" routerLinkActive="active" (click)="navbarCollapsed = true">
         <a class="nav-link" [routerLink]="['/login']">
-          Login
+          Abrir sesión
         </a>
       </li>
       <li class="nav-item user-action-item" *ngIf="(loggedInObservable | async)" routerLinkActive="active" (click)="navbarCollapsed = true">
         <a class="nav-link" [routerLink]="['/user']">
-          Account
+          Cuenta
         </a>
       </li>
       <li class="nav-item user-action-item" *ngIf="(loggedInObservable | async)" (click)="navbarCollapsed = true">
         <a class="nav-link" (click)="logout()">
-          Logout
+          Cerrar sesión
         </a>
       </li>
     </ul>
