@@ -8,9 +8,10 @@ $slogan-line-decoration-width: 80px;
 
 app-home-storefront-page {
   display: block;
+  background-color: $black;
 
   .storefront-jumbotron {
-    background-color: $aquamarina;
+    background-color: $black;
     background-image: url('/assets/imgs/FondoNegro.svg');
     background-position: center;
     background-size: cover;
@@ -111,7 +112,7 @@ app-home-storefront-page {
           font-size: 1.3rem;
 
           &:focus {
-            background-color: $white;
+            background-color: $black;
           }
         }
       }// .store-search-bar
@@ -119,7 +120,7 @@ app-home-storefront-page {
   }// .storefront-jumbotron
 
   .storefront-categories {
-    background-color: $white;
+    background-color: $black;
     margin-top: -$fold-overlap-height;
     padding: 40px 25px 10px;
 
@@ -135,7 +136,7 @@ app-home-storefront-page {
     .store-main-category {
       &.women-category {
         &::before {
-          background-color: rgba($purple, .5);
+          background-color: $black;
         }
       }
 
@@ -189,7 +190,7 @@ app-home-storefront-page {
 
     .store-secondary-category {
       .secondary-category-btn {
-        @include outline-button($grey, transparent, $grey, $white);
+        @include outline-button($grey, transparent, $grey, $black);
         width: 100%;
         height: 100%;
         display: flex;
@@ -308,7 +309,7 @@ app-home-storefront-page {
         }
 
         .listing-title {
-          color: $black;
+          color: $white;
           font-size: 1.2rem;
           font-weight: 900;
           letter-spacing: 0.4rem;

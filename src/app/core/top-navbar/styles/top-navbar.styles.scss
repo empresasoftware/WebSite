@@ -14,14 +14,14 @@ app-top-navbar {
 
     &.expanded {
       @include media-breakpoint-down(md) {
-        background-color: $purple;
+        background-color: $black;
         box-shadow: none;
       }
     }
 
     &::before {
       content: '';
-      background: rgba($purple, 0.35);
+      background: rgba($black, 0.35);
       filter: blur(20px);
       position: absolute;
       top: 0;

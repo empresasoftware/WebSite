@@ -32,7 +32,7 @@
 
   .banner-actions {
     .call-to-action-outline-btn {
-      @include outline-button($white, transparent, $white, $purple);
+      @include outline-button($white, transparent, $white, $red);
       padding: 1rem 3rem;
     }
 
