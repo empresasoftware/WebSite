@@ -6,6 +6,8 @@ export const ROUTES = [
   '/product/:slug',
   '/login',
   '/create-account',
+  '/create-account2',
+  '/create-account_election',
   '/recover-password',
   '/user',
   '/about',

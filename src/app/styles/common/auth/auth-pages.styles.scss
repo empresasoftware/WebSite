@@ -6,7 +6,7 @@
   // Half screen background image
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url('/assets/imgs/home/cta-bg.png');
+  background-image: url('/assets/imgs/FondoNegro.svg');
 
   @include media-breakpoint-only(xl) {
     // col-xl-6 => left 50vw (+ col-1 to give some blank space) => (7*100)/12 = 58.33vw

@@ -25,6 +25,14 @@ export const rootRoutes: Routes = [
     loadChildren: './auth/signup/auth-signup.module#AuthSignupModule'
   },
   {
+    path: 'create-account2',
+    loadChildren: './auth/signup2/auth-signup.module#AuthSignupModule'
+  },
+  {
+    path: 'create-account_election',
+    loadChildren: './auth/signup_election/auth-signup.module#AuthSignup_electionModule'
+  },
+  {
     path: 'recover-password',
     loadChildren: './auth/recover-password/auth-recover-password.module#AuthRecoverPasswordModule'
   },
