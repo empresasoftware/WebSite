@@ -1,19 +1,19 @@
-<!--FORMULARIO PARA REGISTRO DE USUARIO NUEVO-->
+<!--FORMULARIO PARA REGISTRO DE CHICA NUEVA-->
 <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="auth-form">
   <!--CAMPO NOMBRE-->
   <div class="form-group">
-    <label [attr.for]="'name'" class="auth-form-label">NOMBRE</label>
-    <input type="text" class="form-control auth-form-input" formControlName="name" [id]="'name'" placeholder="David Piedra">
+    <label [attr.for]="'name'" class="auth-form-label">NOMBRE PERSONA</label>
+    <input type="text" class="form-control auth-form-input" formControlName="name" [id]="'name'" placeholder="Nombre chica">
   </div>
   <!--CAMPO NOMBRE DE USUARIO-->
   <div class="form-group">
     <label [attr.for]="'username'" class="auth-form-label">NOMBRE DE USUARIO</label>
-    <input type="text" class="form-control auth-form-input" formControlName="username" [id]="'username'" placeholder="David666">
+    <input type="text" class="form-control auth-form-input" formControlName="username" [id]="'username'" placeholder="Chica alias">
   </div>
   <!--CAMPO CORREO-->
   <div class="form-group">
     <label [attr.for]="'email'" class="auth-form-label">CORREO</label>
-    <input type="email" class="form-control auth-form-input" formControlName="email" [id]="'email'" placeholder="davidpiedra@gmail.com">
+    <input type="email" class="form-control auth-form-input" formControlName="email" [id]="'email'" placeholder="ecuescorts@gmail.com">
   </div>
   <!--CAMPO PASSWORD-->
   <div class="form-group">
@@ -25,15 +25,15 @@
     <label [attr.for]="'country'" class="auth-form-label">PAIS</label>
     <input type="text" class="form-control auth-form-input" formControlName="country" [id]="'country'" placeholder="Ecuador">
   </div>
-  <!--CAMPO ESTADO-->
+  <!--CAMPO ESTATURA-->
   <div class="form-group">
-    <label [attr.for]="'estado'" class="auth-form-label">ESTADO</label>
-    <input type="text" class="form-control auth-form-input" formControlName="estado" [id]="'estado'" placeholder="Activo">
+    <label [attr.for]="'estado'" class="auth-form-label">ESTATURA</label>
+    <input type="text" class="form-control auth-form-input" formControlName="estatura" [id]="'estatura'" placeholder="160 cm">
   </div>
-  <!--CAMPO FECHA DE NACIMIENTO-->
+  <!--CAMPO PESO-->
   <div class="form-group">
-    <label [attr.for]="'fecha'" class="auth-form-label">FECHA DE NACIMIENTO</label>
-    <input type="text" class="form-control auth-form-input" formControlName="fecha" [id]="'fecha'" placeholder="01/01/2001">
+    <label [attr.for]="'fecha'" class="auth-form-label">PESO</label>
+    <input type="text" class="form-control auth-form-input" formControlName="peso" [id]="'peso'" placeholder="140 lbs">
   </div>
   <!--CAMPOS DE NOTICIAS Y TÉRMINOS Y CONDICIONES-->
   <div class="custom-control custom-checkbox auth-form-checkbox">

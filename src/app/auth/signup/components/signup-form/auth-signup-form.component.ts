@@ -54,7 +54,7 @@ export class AuthSignupFormComponent {
         }
       },
       err => {
-        console.log('There was an ERROR while creating the account');
+        console.log('Ha habido un error durante la creación de la cuenta');
       }
     );
   }

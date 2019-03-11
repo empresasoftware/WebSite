@@ -26,11 +26,11 @@ export const rootRoutes: Routes = [
   },
   {
     path: 'create-account2',
-    loadChildren: './auth/signup2/auth-signup.module#AuthSignupModule'
+    loadChildren: './auth/signup2/auth-signup.module#AuthSignup2Module'
   },
   {
     path: 'create-account_election',
-    loadChildren: './auth/signup_election/auth-signup.module#AuthSignup_electionModule'
+    loadChildren: './auth/signup_election/auth-signup-election.module#AuthSignup-electionModule'
   },
   {
     path: 'recover-password',

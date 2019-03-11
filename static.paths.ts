@@ -7,7 +7,7 @@ export const ROUTES = [
   '/login',
   '/create-account',
   '/create-account2',
-  '/create-account_election',
+  '/create-account-election',
   '/recover-password',
   '/user',
   '/about',

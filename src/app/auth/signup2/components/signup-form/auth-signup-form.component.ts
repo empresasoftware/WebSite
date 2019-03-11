@@ -12,7 +12,7 @@ import { AuthService } from '../../../services/auth.service';
   ],
   encapsulation: ViewEncapsulation.None
 })
-export class AuthSignupFormComponent {
+export class AuthSignup2FormComponent {
   signupForm: FormGroup;
   // Where to redirect the user after successful login
   @Input() redirectUrl: string;

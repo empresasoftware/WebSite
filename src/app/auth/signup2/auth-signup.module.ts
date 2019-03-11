@@ -28,4 +28,4 @@ export const authSignupRoutes = [
     AuthSignupPageResolver
   ]
 })
-export class AuthSignupModule { }
+export class AuthSignup2Module { }
