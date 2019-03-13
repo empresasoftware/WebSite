@@ -30,7 +30,7 @@ export const rootRoutes: Routes = [
   },
   {
     path: 'create-account_election',
-    loadChildren: './auth/signup_election/auth-signup-election.module#AuthSignup-electionModule'
+    loadChildren: './auth/signup-election/auth-signup.module#AuthSignupModule'
   },
   {
     path: 'recover-password',
