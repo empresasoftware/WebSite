@@ -1,31 +1,31 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { AuthSignupPageComponent } from './components/signup-page/auth-signup-page.component';
-import { AuthSignupPageResolver } from './resolvers/auth-signup-page.resolver';
+import { AuthSignup2PageComponent } from './components/signup-page/auth-signup-page.component';
+import { AuthSignup2PageResolver } from './resolvers/auth-signup-page.resolver';
 
 import { AuthSharedModule } from '../';
 
 export const authSignupRoutes = [
   {
     path: '',
-    component: AuthSignupPageComponent,
+    component: AuthSignup2PageComponent,
     resolve: {
-      data: AuthSignupPageResolver
+      data: AuthSignup2PageResolver
     }
   }
 ];
 
 @NgModule({
   declarations: [
-    AuthSignupPageComponent
+    AuthSignup2PageComponent
   ],
   imports: [
     RouterModule.forChild(authSignupRoutes),
     AuthSharedModule
   ],
   providers: [
-    AuthSignupPageResolver
+    AuthSignup2PageResolver
   ]
 })
 export class AuthSignup2Module { }

@@ -1,26 +1,18 @@
-import { Component, ViewEncapsulation, Input, Output, EventEmitter } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl, Validators, AbstractControl  } from '@angular/forms';
-import { Router } from '@angular/router';
-
-import { AuthService } from '../../../services/auth.service';
-import { NG_MODEL_WITH_FORM_CONTROL_WARNING } from '@angular/forms/src/directives';
-
-//------WS para el registro de cliente
-import { ClienteService } from '../../../../service/cliente.service';
-import { Cliente } from '../../../../model/cliente';
-import { User } from '../../../../model/user';
-import { AuthService2 } from '../../../../service/auth2.service';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators, AbstractControl } from '@angular/forms';
+import { User } from '../..//model/user';
+import { AuthService2 } from '../../service/auth2.service';
+import { ClienteService } from '../../service/cliente.service';
+import { Cliente } from '../..//model/cliente';
 
 @Component({
-  selector: 'app-auth-signup-form',
-  templateUrl: './auth-signup-form.component.html',
-  styleUrls: [
-    './styles/auth-signup-form.styles.scss'
-  ],
+  selector: 'app-sample-layouts-page',
+  templateUrl: './sample-layouts.component.html',
+  styleUrls: [ './styles/sample-layouts.scss' ],
   encapsulation: ViewEncapsulation.None
 })
 
-export class AuthSignupFormComponent {
+export class SampleLayoutsPageComponent {
   formStacked: FormGroup;
   formHorizontal: FormGroup;
   formRegister: FormGroup;
@@ -112,6 +104,8 @@ createCliente(values: Object) {
       
     })
 }
+
+
 }
 
 export function emailValidator(control: FormControl): { [key: string]: any } {

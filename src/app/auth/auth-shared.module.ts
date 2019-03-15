@@ -7,7 +7,7 @@ import { AuthSigninModalComponent } from './signin/components/signin-modal/auth-
 import { AuthSignupFormComponent } from './signup/components/signup-form/auth-signup-form.component';
 import { AuthSignupModalComponent } from './signup/components/signup-modal/auth-signup-modal.component';
 
-//import { AuthSignup2FormComponent } from './signup2/components/signup-form/auth-signup-form.component';
+import { AuthSignup2FormComponent } from './signup2/components/signup-form/auth-signup-form.component';
 
 import { AuthRecoverPasswordFormComponent } from './recover-password/components/recover-password-form/auth-recover-password-form.component';
 
@@ -20,7 +20,7 @@ import { AuthRecoverPasswordFormComponent } from './recover-password/components/
     // Signup stuff
     AuthSignupFormComponent,
     AuthSignupModalComponent,
-    //AuthSignup2FormComponent,
+    AuthSignup2FormComponent,
     // Recover password stuff
     AuthRecoverPasswordFormComponent
   ],
@@ -38,6 +38,7 @@ import { AuthRecoverPasswordFormComponent } from './recover-password/components/
     // Signup stuff
     AuthSignupFormComponent,
     AuthSignupModalComponent,
+    AuthSignup2FormComponent,
     // Recover password stuff
     AuthRecoverPasswordFormComponent
   ]

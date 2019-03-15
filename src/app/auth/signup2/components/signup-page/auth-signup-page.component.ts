@@ -8,7 +8,7 @@ import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
   ],
   encapsulation: ViewEncapsulation.None
 })
-export class AuthSignupPageComponent {
+export class AuthSignup2PageComponent {
   constructor() { }
 
   redirectAccount(): void {

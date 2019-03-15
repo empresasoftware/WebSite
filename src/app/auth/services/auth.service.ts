@@ -36,7 +36,16 @@ export class AuthService implements CanActivate {
     return this.userAuthenticated;
   }
 
-  signup(name: string, email: string, password: string, newsletter: boolean): Observable<any> {
+  signup(name: string, username:string,email: string, password: string,country:string,estado:string,fecha:string, newsletter: boolean): Observable<any> {
+    // EXAMPLE: Call your API and create the user in the database
+    // return this.userApi.create({ email: email, password: password, name: name, newsletter: newsletter });
+
+    // MOCK: Simulate the observable returned by the API
+    const signupObservable = of(true);
+    return signupObservable;
+  }
+
+  signup2(name: string, username:string,email: string, password: string,country:string,estatura:string,peso:string, newsletter: boolean): Observable<any> {
     // EXAMPLE: Call your API and create the user in the database
     // return this.userApi.create({ email: email, password: password, name: name, newsletter: newsletter });
 
