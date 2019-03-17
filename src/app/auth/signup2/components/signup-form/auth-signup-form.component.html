@@ -23,7 +23,7 @@
   <!--CAMPO PAIS-->
   <div class="form-group">
     <label [attr.for]="'country'" class="auth-form-label">PAIS</label>
-    <input type="text" class="form-control auth-form-input" formControlName="country" [id]="'country'" placeholder="Ecuador">
+    <input type="text" class="form-control auth-form-input" formControlName="pais" [id]="'pais'" placeholder="Ecuador">
   </div>
   <!--CAMPO ESTATURA-->
   <div class="form-group">
@@ -50,5 +50,9 @@
     </label>
   </div>
   <!--BOTON DE CREAR CUENTA-->
-  <button type="submit" class="btn btn-block auth-form-submit-btn" [disabled]="!signupForm.valid">CREAR CUENTA</button>
+  <!--
+    <button type="submit" class="btn btn-block auth-form-submit-btn" [disabled]="!signupForm.valid">CREAR CUENTA</button>
+  -->
+  
+  <button type="submit" (click)="createCliente()" class="btn btn-block auth-form-submit-btn" >CREAR CUENTA</button>
 </form>

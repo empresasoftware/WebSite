@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 
 import { AuthService } from '../../../services/auth.service';
+import { Cliente } from '../../../../model/cliente';
+import { ClienteService } from '../../../../service/cliente.service';
 
 @Component({
   selector: 'app-auth-signup2-form',
@@ -14,11 +16,14 @@ import { AuthService } from '../../../services/auth.service';
 })
 export class AuthSignup2FormComponent {
   signupForm: FormGroup;
+  public cliente: Cliente = new Cliente();
+  
   // Where to redirect the user after successful login
   @Input() redirectUrl: string;
   @Output() success = new EventEmitter();
 
   constructor(
+    public serviceCliente: ClienteService,
     public formBuilder: FormBuilder,
     public router: Router,
     private authService: AuthService
@@ -39,14 +44,16 @@ export class AuthSignup2FormComponent {
     });
   }
   onSubmit(): void {
-    this.doSignup2(this.signupForm.value.name,
-       this.signupForm.value.username,
+    this.doSignup2(
+      this.signupForm.value.name,
+      this.signupForm.value.username,
       this.signupForm.value.email,
       this.signupForm.value.password,
       this.signupForm.value.country,
       this.signupForm.value.estatura,
       this.signupForm.value.peso,
-      this.signupForm.value.newsletter);
+      this.signupForm.value.newsletter
+    );
   }
 
   doSignup2(name: string, username:string,email: string, password: string,country:string,estatura:string,peso:string, newsletter: boolean): void {
@@ -68,6 +75,26 @@ export class AuthSignup2FormComponent {
     );
   }
 
+  createCliente(values: Object) {
+    this.cliente.name = this.signupForm.value.name
+    this.cliente.username=this.signupForm.value.username
+    this.cliente.password=this.signupForm.value.password
+    this.cliente.pais= this.signupForm.value.pais
+    this.cliente.estado='Activo'
+    this.cliente.fechaNacimiento=this.signupForm.value.fechaNacimiento
+    //var date:Date = this.signupForm.value.fechaNacimiento
+    //this.cliente.fechaNacimiento = (date.getDay()+'-'+date.getMonth()+'-'+date.getFullYear())
+    this.cliente.fechaNacimiento ='12-05-1993'
+    console.log(this.cliente)
+    
+    this.serviceCliente.createCliente(this.cliente
+      
+      ).then(data => {
+        
+        console.log(data)
+        
+      })
+  }
 
   // onSubmit(): void {
   //   this.doSignup(this.signupForm.value.name, this.signupForm.value.email,

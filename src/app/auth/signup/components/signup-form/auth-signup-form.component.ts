@@ -21,25 +21,37 @@ import { AuthService2 } from '../../../../service/auth2.service';
 })
 
 export class AuthSignupFormComponent {
+  signupForm: FormGroup;
+  // Where to redirect the user after successful login
+  @Input() redirectUrl: string;
+  @Output() success = new EventEmitter();
+  
+  //Del David
   formStacked: FormGroup;
   formHorizontal: FormGroup;
   formRegister: FormGroup;
   formLogin: FormGroup;
-  
-    public email: AbstractControl;
-    public password: AbstractControl;
-    public user: User = new User();
+  public email: AbstractControl;
+  public password: AbstractControl;
+
+  public user: User = new User();
     
-    public cliente: Cliente = new Cliente();
-    public name: AbstractControl
-    public pass: AbstractControl
-    public pais: AbstractControl
-    public estado: AbstractControl
-    public fechaNac: AbstractControl
-    public username: AbstractControl
-    public emailr: AbstractControl
-    public birthday: AbstractControl
-  constructor(fb: FormBuilder,public authService: AuthService2,public serviceCliente: ClienteService) {
+  public cliente: Cliente = new Cliente();
+
+  public name: AbstractControl
+  public pass: AbstractControl
+  public pais: AbstractControl
+  public estado: AbstractControl
+  public fecha: AbstractControl
+  public username: AbstractControl
+
+  constructor(
+    fb: FormBuilder,
+    public router: Router,
+    public authService: AuthService,
+    public authService2: AuthService2,
+    public serviceCliente: ClienteService)
+    {
     this.formStacked = fb.group({
       email: new FormControl(''),
       password: new FormControl(''),
@@ -54,11 +66,11 @@ export class AuthSignupFormComponent {
     this.formRegister = fb.group({
       email: new FormControl('', Validators.required),
       password: new FormControl('', Validators.required),
-      cpassword: new FormControl('', Validators.required),
       name: new FormControl('', Validators.required),
       username: new FormControl('', Validators.required),
       pais: new FormControl('', Validators.required),
-      birthday: new FormControl('', Validators.required)
+      fecha: new FormControl('', Validators.required),
+      estado: new FormControl('', Validators.required)
     });
     this.formLogin = fb.group({
       email: new FormControl('', Validators.required),
@@ -68,20 +80,18 @@ export class AuthSignupFormComponent {
    
   this.email = this.formLogin.controls['email'];
   this.password = this.formLogin.controls['password'];
-  
-  this.emailr = this.formRegister.controls['email']
-  this.pass = this.formRegister.controls['password']
   this.name = this.formRegister.controls['name']
   this.username = this.formRegister.controls['username']
   this.pais = this.formRegister.controls['pais']
-  this.birthday = this.formRegister.controls['birthday']
+  this.fecha= this.formRegister.controls['fecha']
+  this.estado=this.formRegister.controls['estado']
   }
 
   public onSubmit(values: Object): void {
     if (this.formLogin.valid) {
         
         this.user = new User(this.email.value, '', this.password.value, '')
-        this.authService.loginUser(this.user).then((data) => {
+        this.authService2.loginUser(this.user).then((data) => {
             localStorage.setItem('currentUser', JSON.stringify(data))
             
             alert('Login OK')
@@ -96,11 +106,10 @@ createCliente(values: Object) {
   this.cliente.name = this.name.value
   this.cliente.username=this.username.value
   this.cliente.password=this.pass.value
-  this.cliente.email = this.emailr.value
   this.cliente.pais= this.pais.value
   this.cliente.estado='Activo'
-  this.cliente.fechaNacimiento=this.birthday.value
-  var date:Date = this.birthday.value
+  this.cliente.fechaNacimiento=this.fecha.value
+  var date:Date = this.fecha.value
   this.cliente.fechaNacimiento = (date.getDay()+'-'+date.getMonth()+'-'+date.getFullYear())
   this.cliente.fechaNacimiento ='12-05-1993'
   console.log(this.cliente)
