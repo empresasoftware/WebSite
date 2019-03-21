@@ -5,6 +5,8 @@ import { User } from '../model/user';
 import { SERVICES_SCORTS, SERVICES_CLIENTE } from '../config.app';
 //import * as JWT from 'jwt-decode';
 import { Cliente } from '../model/cliente';
+import { HttpClientModule } from '@angular/common/http'; 
+import { HttpModule } from '@angular/http';
  
 @Injectable({
   

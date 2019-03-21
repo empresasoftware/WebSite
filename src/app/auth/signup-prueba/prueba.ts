@@ -31,6 +31,7 @@ export class SampleLayoutsPageComponent {
     public username: AbstractControl
     public emailr: AbstractControl
     public birthday: AbstractControl
+    
   constructor(fb: FormBuilder,public authService: AuthService2,public serviceCliente: ClienteService) {
     this.formStacked = fb.group({
       email: new FormControl(''),

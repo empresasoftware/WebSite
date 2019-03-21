@@ -12,6 +12,7 @@ import { AuthSignup2FormComponent } from './signup2/components/signup-form/auth-
 import { AuthRecoverPasswordFormComponent } from './recover-password/components/recover-password-form/auth-recover-password-form.component';
 
 
+
 @NgModule({
   declarations: [
     // Signin stuff

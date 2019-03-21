@@ -5,7 +5,8 @@ import { PreloadAllModules, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { TransferHttpCacheModule } from '@nguniversal/common';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http'; 
+import { HttpModule } from '@angular/http';
 
 import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,6 +24,7 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
     HttpClientModule,
+    HttpModule,
     RouterModule.forRoot(rootRoutes, {
       // enableTracing :true, // For debugging
       preloadingStrategy: PreloadAllModules,

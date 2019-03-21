@@ -16,6 +16,8 @@ import { SharedModule } from '../shared';
 
 import { AuthService } from '../auth/services/auth.service';
 import { BreadcrumbsService } from '../shared/breadcrumbs/breadcrumbs.service';
+import { HttpClientModule } from '@angular/common/http'; 
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({

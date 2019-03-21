@@ -3,6 +3,8 @@ import { Http, Headers } from '@angular/http';
 import { map } from 'rxjs/operators';
 import { User } from '../model/user';
 import { SERVICES_AUTH } from '../config.app';
+import { HttpClientModule } from '@angular/common/http'; 
+import { HttpModule } from '@angular/http';
 
 
 @Injectable({

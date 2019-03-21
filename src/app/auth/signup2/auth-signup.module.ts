@@ -6,6 +6,10 @@ import { AuthSignup2PageResolver } from './resolvers/auth-signup-page.resolver';
 
 import { AuthSharedModule } from '../';
 
+import { HttpClientModule } from '@angular/common/http'; 
+import { HttpModule } from '@angular/http';
+
+
 export const authSignupRoutes = [
   {
     path: '',
