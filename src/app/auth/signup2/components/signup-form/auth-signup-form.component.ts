@@ -124,11 +124,11 @@ export class AuthSignup2FormComponent {
     this.cliente.password=this.signupForm.value.password
     this.cliente.pais= this.signupForm.value.pais
     this.cliente.estado='Activo'
-    this.cliente.fechaNacimiento= this.signupForm.value.fecha
+    //this.cliente.fechaNacimiento= this.signupForm.value.fecha
     //this.cliente.fechaNacimiento=this.signupForm.value.fechaNacimiento
     //var date:Date = this.signupForm.value.fechaNacimiento
     //this.cliente.fechaNacimiento = (date.getDay()+'-'+date.getMonth()+'-'+date.getFullYear())
-    //this.cliente.fechaNacimiento ='12-05-1993'
+    this.cliente.fechaNacimiento ='12-05-1993'
     console.log(this.cliente)
     
     this.serviceCliente.createCliente(this.cliente
